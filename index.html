@@ -5,9 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>namuunaa</h1>
-    <h4>hiiiii</h4>
-
+<style>
+    #mogoiii1 {
+        width: 200px;
+        position: absolute;
+        margin-top: 0px;
+        margin-left:200px;
+    }
+     #mogoiii2 {
+        width: 200px;
+        position: absolute;
+        margin-top: 0px;
+        margin-left:600px;
+    }
+</style>
+<body 
+    style="margin: 0 auto" onkeypress="myFunction(event)">
+    <div style="
+        width:50%;
+        background-image: url(mod2.png);
+        background-size: contain;
+        height:1000px;"
+    >
+<img id="mogoiii1" src="mogoiii1.png" />
+<img id="mogoiii2" src="mogoiii2.png" />
+</div>
+<script>
+    let mogoiii1=document.getElementById("mogoiii1");
+    let mogoiii2=document.getElementById("mogoiii2");
+    let top1 = 0;
+    let top2 = 0;
+    function myFunction(event) {
+        if (event.key == "d") {
+            top1 += 50;
+            mogoiii1.style.marginTop = top1 + "px";
+        }
+        if (event.key == "l") {
+            top2 += 50;
+            mogoiii2.style.marginTop = top2 + "px";
+        }
+        if (top1 > 750){
+            alert("Шар могой хожлоо");
+            mogoiii1.style.marginTop = 0 + "px";
+            mogoiii2.style.marginTop = 0 + "px";
+            top1 = 0;
+            top2 = 0;
+        } else if (top2 > 750){
+            alert("Шар могой хожлоо");
+            mogoiii1.style.marginTop = 0 + "px";
+            mogoiii2.style.marginTop = 0 + "px";
+            top1 = 0;
+            top2 = 0;
+        }
+    }
+</script>
 </body>
 </html>
